@@ -18,9 +18,9 @@ jobs:
       - name: EC2서버에 접속하기 #step에 붙이는 이름
         uses: appleboy/ssh-action@v1 #실행시킬 리눅스 명령어 작성
         with:
-          host: ${{secrets.EC2_HOST}}
-          username: ${{secrets.EC2_USERNAME}}
-          key: ${{secrets.EC2_PRIVATE_KEY}}
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_PRIVATE_KEY }}
           script_stop: true
           script: |
             cd /home/ubuntu/security-server
